@@ -69,6 +69,7 @@ public class PedidoController {
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado"),
+            @ApiResponse(responseCode = "422", description = "É necessário efetuar o pagamento"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor"),
     })
     public ResponseEntity<Pedido> prepararPedido(@PathVariable UUID id){
@@ -85,6 +86,7 @@ public class PedidoController {
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado"),
+            @ApiResponse(responseCode = "422", description = "O pedido ainda não está em preparo"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor"),
     })
     public ResponseEntity<Pedido> aguardaRetirada(@PathVariable UUID id){
@@ -101,6 +103,7 @@ public class PedidoController {
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado"),
+            @ApiResponse(responseCode = "422", description = "Pedido está em preparo"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor"),
     })
     public ResponseEntity<Pedido> saiuParaEntrega(@PathVariable UUID id){
@@ -117,6 +120,7 @@ public class PedidoController {
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado"),
+            @ApiResponse(responseCode = "422", description = "Pedido aguardando para ser retirado"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor"),
     })
     public ResponseEntity<Pedido> pedidoEntregue(@PathVariable UUID id){
@@ -134,6 +138,7 @@ public class PedidoController {
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado"),
+            @ApiResponse(responseCode = "422", description = "Pedido já foi entregue, entre em contato com a loja para devolução"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor"),
     })
     public ResponseEntity<Pedido> cancelarPedido(@PathVariable UUID id){

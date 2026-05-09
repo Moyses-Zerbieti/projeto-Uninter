@@ -87,7 +87,7 @@ public class PedidoService {
 
 
         if (pedido.getStatusPedido() != StatusPedido.EM_PREPARO){
-            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "O ainda não está em preparo");
+            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "O pedido ainda não está em preparo");
         }
 
         pedido.setStatusPedido(StatusPedido.AGUARDANDO_ENTREGADOR);
