@@ -68,19 +68,6 @@ public class PedidoService {
                 .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Pedido não encontrado"));
     }
 
-//    public Pedido pagarPedido(UUID id){
-//        Pedido pedido = pedidoRepository.findById(id)
-//                .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Pedido não encontrado"));
-//
-//        if (pedido.getStatusPedido() != StatusPedido.AGUARDANDO_PAGAMENTO){
-//            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Pedido já foi pago");
-//        }
-//
-//        pedido.setStatusPedido(StatusPedido.PAGO);
-//
-//        return pedidoRepository.save(pedido);
-//    }
-
     public Pedido prepararPedido(UUID id){
         Pedido pedido = pedidoRepository.findById(id)
                 .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Pedido não encontrado"));

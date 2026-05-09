@@ -61,23 +61,6 @@ public class PedidoController {
         return ResponseEntity.ok(pedido);
     }
 
-//    @PatchMapping("/{id}/pagar")
-//    @PreAuthorize("hasAnyRole('ADMIN','GERENTE','ATENDENTE')")
-//    @Operation(summary = "Realiza o pagamento do pedido")
-//    @ApiResponses({
-//            @ApiResponse(responseCode = "200", description = "Pagamento realizado"),
-//            @ApiResponse(responseCode = "403", description = "Acesso negado"),
-//            @ApiResponse(responseCode = "401", description = "Não autorizado"),
-//            @ApiResponse(responseCode = "404", description = "Pedido não encontrado"),
-//            @ApiResponse(responseCode = "500", description = "Erro no servidor"),
-//    })
-//    public ResponseEntity<Pedido> pagarPedido(@PathVariable UUID id){
-//        Pedido pedido = service.pagarPedido(id);
-//
-//        return ResponseEntity.ok(pedido);
-//    }
-
-
     @PatchMapping("/{id}/preparar")
     @PreAuthorize("hasAnyRole('ADMIN','GERENTE','ATENDENTE')")
     @Operation(summary = "Altera o status do pedido para preparar")
