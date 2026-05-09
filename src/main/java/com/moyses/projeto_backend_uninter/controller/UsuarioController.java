@@ -54,6 +54,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(summary = "Apaga um usuário do sistema")
     @PreAuthorize("hasAnyRole('ADMIN', 'GERENTE')")
     @ApiResponses({
             @ApiResponse(responseCode = "204", description = "Usuário deletado com sucesso"),
