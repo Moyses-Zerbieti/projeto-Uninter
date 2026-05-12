@@ -1,0 +1,645 @@
+{
+  "info": {
+    "_postman_id": "986947f8-99aa-4a22-9315-d4403c12f47e",
+    "name": "projeto-backend-uninter",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44547814",
+    "_collection_link": "https://go.postman.co/collection/44547814-986947f8-99aa-4a22-9315-d4403c12f47e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Usuario",
+      "item": [
+        {
+          "name": "registrar usuario",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "123S",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "test@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Moyses Zerbieti\",\r\n    \"email\": \"test23@gmail.com\",\r\n    \"senha\": 123,\r\n    \"role\": \"GERENTE\"\r\n\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/usuario/registrar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "usuario",
+                "registrar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "consulta usuario",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/usuario/07f65f05-45b1-4536-9fb7-434f412f20b0",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "usuario",
+                "07f65f05-45b1-4536-9fb7-434f412f20b0"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deletar usuario",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "123",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "test@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/usuario/636501bd-29b2-45ee-84fe-93e79e52a0b8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "usuario",
+                "636501bd-29b2-45ee-84fe-93e79e52a0b8"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Produto",
+      "item": [
+        {
+          "name": "Criar Produto",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\n    \"nome\": \"Lanche-Triste\",\n    \"preco\": 60.0,\n    \"estoque\": 15\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/produto/criar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produto",
+                "criar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Produtos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/produto/listar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produto",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obter Produto por ID",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "123",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "test@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/produto/59d4c1a2-766e-4c59-a935-6ce04bc4f8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produto",
+                "59d4c1a2-766e-4c59-a935-6ce04bc4f8"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pedido",
+      "item": [
+        {
+          "name": "Fazer Pedido",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"clienteId\":\"07f65f05-45b1-4536-9fb7-434f412f20b0\",\n\"canalPedido\":\"APP\",\n\"itens\":[\n    {\n        \"produtoId\": \"59d4c1a2-766e-4c59-a935-6ce04bc4f8c9\",\n        \"quantidade\": 3\n    }\n]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/pedir",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "pedir"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagar Pedido",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"formaPagamento\": \"PIX\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/pagamento/b623389a-b748-4f98-ba20-a79c614ae54b/pagar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pagamento",
+                "b623389a-b748-4f98-ba20-a79c614ae54b",
+                "pagar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Consultar Pedido",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/b623389a-b748-4f98-ba20-a79c614ae54b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "b623389a-b748-4f98-ba20-a79c614ae54b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar pedido",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/a44d0d95-e3ed-4040-ae99-601af5a439e8/preparar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "a44d0d95-e3ed-4040-ae99-601af5a439e8",
+                "preparar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Aguarda Retirada",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/a44d0d95-e3ed-4040-ae99-601af5a439e8/aguardar-retirada",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "a44d0d95-e3ed-4040-ae99-601af5a439e8",
+                "aguardar-retirada"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pedido na Rota",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/a44d0d95-e3ed-4040-ae99-601af5a439e8/saiu-entrega",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "a44d0d95-e3ed-4040-ae99-601af5a439e8",
+                "saiu-entrega"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pedido Entregue",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/a44d0d95-e3ed-4040-ae99-601af5a439e8/entregue",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "a44d0d95-e3ed-4040-ae99-601af5a439e8",
+                "entregue"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancelar Pedido",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "usuarioAdmin@gmail.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/pedido/b623389a-b748-4f98-ba20-a79c614ae54b/cancelar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "pedido",
+                "b623389a-b748-4f98-ba20-a79c614ae54b",
+                "cancelar"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
