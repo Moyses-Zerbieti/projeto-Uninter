@@ -40,10 +40,10 @@ public class PedidoService {
 
         for (var itemRequest : request.itens){
             Produto produto = produtoRepository.findById(itemRequest.produtoId)
-                    .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Produto não encontrado"));
+                    .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "Produto não encontrado"));
 
             if(produto.getEstoque() < itemRequest.quantidade){
-                throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY,"Estoque insuficiente");
+                throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Estoque insuficiente");
             }
 
             ItemPedido item = new ItemPedido();
