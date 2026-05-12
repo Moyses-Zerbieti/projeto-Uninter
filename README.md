@@ -355,6 +355,28 @@ Body:
 
 ---
 
+# Collection Postman
+
+A aplicação possui uma collection completa do Postman contendo os endpoints utilizados durante o desenvolvimento e testes da API.
+
+A collection inclui:
+
+- Usuários
+- Produtos
+- Pedidos
+- Pagamentos
+- Fluxo completo de status
+- Testes de respostas HTTP
+- Regras de negócio
+
+## Arquivo da collection
+
+A collection exportada está disponível na pasta:
+
+```/postman```
+
+---
+
 # Tratamento de erros
 
 A API retorna respostas HTTP apropriadas para cada cenário:
