@@ -32,8 +32,8 @@ public class PedidoController {
     @Operation(summary = "Efetua o pedido de produto")
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Pedido efetuado com sucesso"),
-            @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
+            @ApiResponse(responseCode = "404", description = "Cliente/Produto não encontrado"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor")
     })
     public ResponseEntity<Pedido>fazerPedido(@RequestBody PedidoRequest request){
