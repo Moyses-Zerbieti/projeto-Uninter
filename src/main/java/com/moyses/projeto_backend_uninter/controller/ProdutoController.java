@@ -63,7 +63,7 @@ public class ProdutoController {
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "400", description = "Requisição não encontrada"),
-            @ApiResponse(responseCode = "404", description = "Não existe produtos cadastrados"),
+            @ApiResponse(responseCode = "404", description = "Produto não encontrado"),
     })
     public ResponseEntity<Produto> obterPorId(@PathVariable UUID id){
         return ResponseEntity.ok(service.obterProdutoPorId(id));
