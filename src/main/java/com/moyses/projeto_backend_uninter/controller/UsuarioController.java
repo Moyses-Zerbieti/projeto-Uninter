@@ -45,6 +45,7 @@ public class UsuarioController {
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Usuário encontrado com sucesso"),
             @ApiResponse(responseCode= "403", description = "Acesso negado"),
+            @ApiResponse(responseCode = "404", description = "Usuário não encontrado"),
             @ApiResponse(responseCode = "401", description = "Não autorizado"),
             @ApiResponse(responseCode = "500", description = "Erro no servidor")
     })
